@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>限定モニター申込下書き | Shikake Studio（仮）</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html">Shikake Studio（仮）</a>
+      <nav aria-label="主要ナビゲーション">
+        <a href="index.html#service">サービス</a>
+        <a href="index.html#sample">実績</a>
+        <a href="index.html#flow">流れ</a>
+        <a href="privacy.html">プライバシー</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section apply-hero">
+        <div class="section-heading">
+          <p class="eyebrow">Local Draft</p>
+          <h1>限定モニター申込下書き</h1>
+          <p class="lead">
+            このフォームはローカルで動く下書きです。入力内容は送信されません。専用フォーム作成前に、質問項目と条件を確認するためのものです。
+          </p>
+          <p class="lead small-lead">
+            実オンライン化する場合は、プライバシー方針、保存先、閲覧権限、削除方法を確認してから受付を開始します。
+          </p>
+        </div>
+      </section>
+
+      <section class="section apply-layout">
+        <form id="apply-form" class="apply-form">
+          <label>
+            呼び名
+            <input id="display-name" type="text" placeholder="例: 屋号、担当名、ニックネーム">
+          </label>
+
+          <label>
+            連絡用メール
+            <input id="email" type="text" inputmode="email" placeholder="例: 連絡可能なメールアドレス">
+          </label>
+
+          <label>
+            業種・活動内容
+            <input id="business" type="text" placeholder="例: 美容室、整体、個人コーチ、EC、教室">
+          </label>
+
+          <label>
+            作りたいもの
+            <select id="deliverable">
+              <option>LP構成案</option>
+              <option>SNS投稿企画</option>
+              <option>問い合わせ返信テンプレート</option>
+              <option>業務・発信の棚卸し</option>
+              <option>まだ決まっていない</option>
+            </select>
+          </label>
+
+          <label>
+            困っていること
+            <textarea id="problem" rows="4" placeholder="機密情報や顧客の個人情報は書かないでください。"></textarea>
+          </label>
+
+          <label>
+            希望する成果物
+            <textarea id="expected" rows="4" placeholder="例: 1週間分の投稿案、サービスページの構成、問い合わせ返信の型"></textarea>
+          </label>
+
+          <label>
+            実績化の可否
+            <select id="case-study">
+              <option>匿名事例なら可</option>
+              <option>実名掲載可</option>
+              <option>掲載不可</option>
+              <option>相談したい</option>
+            </select>
+          </label>
+
+          <fieldset class="agreement-box">
+            <legend>モニター条件</legend>
+            <label><input id="agree-prototype" type="checkbox"> 試作品であり、本番システムではないことを理解しました。</label>
+            <label><input id="agree-sensitive" type="checkbox"> 機密情報、個人情報、認証情報、金融情報は送りません。</label>
+            <label><input id="agree-scope" type="checkbox"> 法務、税務、医療、金融など専門判断は対象外であることを理解しました。</label>
+          </fieldset>
+
+          <button type="submit">申込文を作る</button>
+        </form>
+
+        <aside class="apply-output">
+          <h2>申込文</h2>
+          <p>実フォーム作成時の通知文や確認用テキストとして使う下書きです。</p>
+          <pre id="application-text">フォームを入力して申込文を作成してください。</pre>
+          <button id="copy-application" class="secondary-action" type="button" disabled>申込文をコピー</button>
+        </aside>
+      </section>
+    </main>
+
+    <script src="apply.js"></script>
+  </body>
+</html>

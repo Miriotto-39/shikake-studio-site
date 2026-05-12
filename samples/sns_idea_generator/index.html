@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SNS投稿企画ジェネレーター | Sample Prototype</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">1日プロトタイプ サンプル 02</p>
+          <h1 id="page-title">SNS投稿企画<br>ジェネレーター</h1>
+          <p class="lead">
+            商品、対象顧客、投稿目的を入力すると、1週間分の投稿テーマと切り口を作ります。
+          </p>
+        </div>
+        <div class="hero-note">
+          <strong>外部送信なし</strong>
+          <span>このサンプルはローカルで完結します。顧客情報や機密情報は入力しない前提です。</span>
+        </div>
+      </section>
+
+      <section class="workspace" aria-label="投稿企画フォーム">
+        <form id="idea-form" class="panel">
+          <div class="panel-heading">
+            <h2>企画条件</h2>
+            <p>売りたいものと届けたい相手を軽く入れてください。</p>
+          </div>
+
+          <label>
+            商品・サービス
+            <input id="offer" type="text" placeholder="例: 季節の焼き菓子、体験レッスン、整体メニュー">
+          </label>
+
+          <label>
+            届けたい相手
+            <input id="audience" type="text" placeholder="例: 仕事帰りの20代女性、子育て中の親、近所の常連客">
+          </label>
+
+          <label>
+            投稿目的
+            <select id="goal">
+              <option value="awareness">認知を広げる</option>
+              <option value="trust">信頼を増やす</option>
+              <option value="visit">来店・問い合わせを増やす</option>
+              <option value="repeat">リピートを増やす</option>
+            </select>
+          </label>
+
+          <fieldset>
+            <legend>トーン</legend>
+            <div class="choice-grid">
+              <label><input type="radio" name="tone" value="friendly" checked> 親しみやすい</label>
+              <label><input type="radio" name="tone" value="expert"> 専門的</label>
+              <label><input type="radio" name="tone" value="calm"> 落ち着いた</label>
+              <label><input type="radio" name="tone" value="energetic"> 元気</label>
+            </div>
+          </fieldset>
+
+          <button type="submit">企画を作る</button>
+        </form>
+
+        <aside class="panel output-panel" aria-live="polite">
+          <div class="panel-heading">
+            <h2>1週間の投稿案</h2>
+            <p>投稿テーマ、本文の方向性、CTAをまとめます。</p>
+          </div>
+          <div id="output" class="empty-state">
+            フォームを入力して企画を作成してください。
+          </div>
+          <button id="copy-output" class="secondary-button" type="button" disabled>投稿案をコピー</button>
+        </aside>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

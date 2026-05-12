@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AI業務棚卸し診断 | Sample Prototype</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">1日プロトタイプ サンプル</p>
+          <h1 id="page-title">AI業務棚卸し診断</h1>
+          <p class="lead">
+            日常業務を入力すると、AI化しやすい作業、導入の優先順位、次の小さな実験を整理します。
+          </p>
+        </div>
+        <div class="hero-metrics" aria-label="診断の特徴">
+          <div>
+            <span class="metric-value">0円</span>
+            <span class="metric-label">外部API不使用</span>
+          </div>
+          <div>
+            <span class="metric-value">5分</span>
+            <span class="metric-label">初期診断</span>
+          </div>
+          <div>
+            <span class="metric-value">3案</span>
+            <span class="metric-label">改善候補</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="workspace" aria-label="診断フォーム">
+        <form id="audit-form" class="panel">
+          <div class="panel-heading">
+            <h2>業務を入力</h2>
+            <p>機密情報や個人情報は入れず、作業内容だけを書いてください。</p>
+          </div>
+
+          <label>
+            業種・活動内容
+            <input id="business-type" type="text" placeholder="例: 美容室、製造業、個人コーチ、EC運営">
+          </label>
+
+          <label>
+            よく発生する作業
+            <textarea id="tasks" rows="6" placeholder="例: 問い合わせ返信、予約調整、SNS投稿、見積書作成、議事録整理"></textarea>
+          </label>
+
+          <fieldset>
+            <legend>一番減らしたい負担</legend>
+            <div class="choice-grid">
+              <label><input type="radio" name="pain" value="time" checked> 時間</label>
+              <label><input type="radio" name="pain" value="quality"> 品質ばらつき</label>
+              <label><input type="radio" name="pain" value="response"> 返信速度</label>
+              <label><input type="radio" name="pain" value="ideas"> 企画不足</label>
+            </div>
+          </fieldset>
+
+          <label>
+            週あたりの作業時間
+            <input id="hours" type="number" min="1" max="80" value="5">
+          </label>
+
+          <button type="submit">診断する</button>
+        </form>
+
+        <aside class="panel result-panel" aria-live="polite">
+          <div class="panel-heading">
+            <h2>診断結果</h2>
+            <p>入力内容に応じて、試しやすい改善案を表示します。</p>
+          </div>
+          <div id="result" class="empty-state">
+            左のフォームを入力して診断してください。
+          </div>
+          <button id="copy-result" class="secondary-button" type="button" disabled>結果をコピー</button>
+        </aside>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
