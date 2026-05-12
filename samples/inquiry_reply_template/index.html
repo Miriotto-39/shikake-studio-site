@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>問い合わせ返信テンプレートメーカー | Sample Prototype</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">1日プロトタイプ サンプル 04</p>
+          <h1 id="page-title">問い合わせ返信テンプレートメーカー</h1>
+          <p class="lead">
+            相談内容、温度感、次に案内したい行動を入力すると、初回返信、確認事項、断る場合の文面を整理します。
+          </p>
+        </div>
+        <div class="status-card">
+          <strong>返信の型まで</strong>
+          <span>顧客対応を自動化する前に、まず安全で失礼のない返信の型を作るためのサンプルです。</span>
+        </div>
+      </section>
+
+      <section class="workspace" aria-label="問い合わせ返信フォーム">
+        <form id="reply-form" class="panel">
+          <div class="panel-heading">
+            <h2>問い合わせ情報</h2>
+            <p>架空の内容で試せます。実名、連絡先、顧客情報、機密情報は入れないでください。</p>
+          </div>
+
+          <label>
+            事業・サービス
+            <input id="service" type="text" placeholder="例: 個別英会話レッスン">
+          </label>
+
+          <label>
+            問い合わせ内容
+            <textarea id="inquiry" rows="4" placeholder="例: 料金と体験レッスンの空き状況を知りたい"></textarea>
+          </label>
+
+          <label>
+            相手の温度感
+            <select id="temperature">
+              <option>検討中</option>
+              <option>急いでいる</option>
+              <option>詳しく知りたい</option>
+              <option>条件が合えば申し込みたい</option>
+            </select>
+          </label>
+
+          <label>
+            次に案内したい行動
+            <input id="next-action" type="text" placeholder="例: 体験レッスン候補日を3つ送ってもらう">
+          </label>
+
+          <button type="submit">返信案を作る</button>
+        </form>
+
+        <aside class="panel output-panel" aria-live="polite">
+          <div class="panel-heading">
+            <h2>返信テンプレート</h2>
+            <p>初回返信、確認事項、対象外の場合の返信を出力します。</p>
+          </div>
+          <div id="output" class="empty-state">
+            フォームを入力して返信案を作成してください。
+          </div>
+          <button id="copy-output" class="secondary-button" type="button" disabled>返信案をコピー</button>
+        </aside>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
