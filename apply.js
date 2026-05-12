@@ -32,6 +32,7 @@ form.addEventListener("submit", (event) => {
     `- 専門判断は対象外: ${checked("#agree-scope")}`,
     "",
     "注意: この下書きフォームはブラウザ内で申込文を作るだけで、外部送信しません。",
+    "共有元から案内された連絡手段がある場合のみ、この申込文を送ってください。",
   ].join("\n");
 
   output.textContent = latestApplication;
