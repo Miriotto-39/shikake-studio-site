@@ -31,7 +31,7 @@ form.addEventListener("submit", (event) => {
     `- 機密情報等を送らないこと: ${checked("#agree-sensitive")}`,
     `- 専門判断は対象外: ${checked("#agree-scope")}`,
     "",
-    "注意: この下書きフォームはローカルで動作し、外部送信しません。",
+    "注意: この下書きフォームはブラウザ内で申込文を作るだけで、外部送信しません。",
   ].join("\n");
 
   output.textContent = latestApplication;
