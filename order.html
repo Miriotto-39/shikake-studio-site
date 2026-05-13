@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>有料モニター申込前チェック | Shikake Studio（仮）</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html">Shikake Studio（仮）</a>
+      <nav aria-label="主要ナビゲーション">
+        <a href="index.html#price">価格</a>
+        <a href="scope.html">提供範囲</a>
+        <a href="apply.html">申込下書き</a>
+        <a href="privacy.html">プライバシー</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section apply-hero">
+        <div class="section-heading">
+          <p class="eyebrow">Paid Draft</p>
+          <h1>有料モニター申込前チェック</h1>
+          <p class="lead">
+            このページは、有料対応に進めるかを確認するための下書きです。入力内容は外部送信されず、決済も行いません。
+          </p>
+          <p class="lead small-lead">
+            実際の請求方法、税込・税抜、受付可否、納品範囲は個別確認後に確定します。送る前に <a href="scope.html">提供範囲と受付条件</a> を確認してください。
+          </p>
+        </div>
+      </section>
+
+      <section class="section apply-layout">
+        <form id="order-form" class="apply-form">
+          <label>
+            希望プラン
+            <select id="plan">
+              <option value="無料レビュー / 0円">無料レビュー / 0円</option>
+              <option value="初回モニター / 9,800円">初回モニター / 9,800円</option>
+              <option value="標準プロトタイプ / 29,800円">標準プロトタイプ / 29,800円</option>
+            </select>
+          </label>
+
+          <label>
+            希望成果物
+            <select id="deliverable">
+              <option>LP構成案</option>
+              <option>SNS投稿企画</option>
+              <option>問い合わせ返信テンプレート</option>
+              <option>業務・発信の棚卸し</option>
+            </select>
+          </label>
+
+          <label>
+            使う場面
+            <input id="usage-scene" type="text" placeholder="例: 新サービス紹介、SNS運用の見直し、問い合わせ対応">
+          </label>
+
+          <label>
+            期待する判断材料
+            <textarea id="decision" rows="4" placeholder="例: この訴求で伝わるか、投稿の方向性が合うか、返信の型として使えるか"></textarea>
+          </label>
+
+          <label>
+            実績化の可否
+            <select id="case-study">
+              <option>匿名事例なら可</option>
+              <option>掲載不可</option>
+              <option>相談したい</option>
+            </select>
+          </label>
+
+          <fieldset class="agreement-box">
+            <legend>有料対応前の確認</legend>
+            <label><input id="agree-no-payment" type="checkbox"> このページでは決済や請求が行われないことを理解しました。</label>
+            <label><input id="agree-scope" type="checkbox"> 本番開発、広告運用、決済、認証、個人情報処理、専門判断、成果保証は対象外であることを理解しました。</label>
+            <label><input id="agree-sensitive" type="checkbox"> 機密情報、個人情報、認証情報、金融情報は送りません。</label>
+            <label><input id="agree-finalize" type="checkbox"> 請求方法、税込・税抜、受付可否、納品範囲は個別確認後に確定することを理解しました。</label>
+          </fieldset>
+
+          <button type="submit">確認文を作る</button>
+        </form>
+
+        <aside class="apply-output">
+          <h2>有料対応前の確認文</h2>
+          <p>共有元から案内された連絡手段へ送るための下書きです。ここで入力した内容は保存されません。</p>
+          <pre id="order-text">フォームを入力して確認文を作成してください。</pre>
+          <button id="copy-order" class="secondary-action" type="button" disabled>確認文をコピー</button>
+        </aside>
+      </section>
+    </main>
+
+    <script src="order.js"></script>
+  </body>
+</html>
