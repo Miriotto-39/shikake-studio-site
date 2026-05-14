@@ -436,6 +436,30 @@ h3 {
   line-height: 1.8;
 }
 
+.article-body {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 28px;
+  background: var(--surface);
+}
+
+.article-body p {
+  color: var(--muted);
+  line-height: 1.9;
+}
+
+.article-body h2 {
+  margin-top: 34px;
+  font-size: 26px;
+}
+
+.article-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
 .sample-link {
   display: inline-flex;
   align-items: center;

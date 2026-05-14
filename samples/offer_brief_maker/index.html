@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>オファーブリーフメーカー | Sample Prototype</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">1日プロトタイプ サンプル 05</p>
+          <h1 id="page-title">オファーブリーフメーカー</h1>
+          <p class="lead">
+            サービス名、対象顧客、悩み、提供価値、次に取ってほしい行動を入力すると、販促用の短い提案文をまとめます。
+          </p>
+        </div>
+        <div class="status-card">
+          <strong>売り出し文の下書きまで</strong>
+          <span>小規模店舗や個人事業主が、LP、SNS、問い合わせ導線を同じ言葉で整えるためのサンプルです。</span>
+        </div>
+      </section>
+
+      <section class="workspace" aria-label="オファーブリーフフォーム">
+        <form id="offer-form" class="panel">
+          <div class="panel-heading">
+            <h2>サービス情報</h2>
+            <p>架空の内容で試せます。実名、連絡先、顧客情報、機密情報は入れないでください。</p>
+          </div>
+
+          <label>
+            サービス名
+            <input id="service-name" type="text" placeholder="例: 初回カウンセリング付き整体">
+          </label>
+
+          <label>
+            対象顧客
+            <input id="target" type="text" placeholder="例: デスクワークで肩こりに悩む30代会社員">
+          </label>
+
+          <label>
+            悩み
+            <textarea id="problem" rows="4" placeholder="例: 慢性的な肩こりがあるが、どこに相談すればよいかわからない"></textarea>
+          </label>
+
+          <label>
+            提供価値
+            <textarea id="value" rows="4" placeholder="例: 姿勢の癖を確認し、日常で続けやすいセルフケアまで案内する"></textarea>
+          </label>
+
+          <label>
+            次に取ってほしい行動
+            <input id="next-action" type="text" placeholder="例: 体験予約フォームから希望日時を送る">
+          </label>
+
+          <button type="submit">ブリーフを作る</button>
+        </form>
+
+        <aside class="panel output-panel" aria-live="polite">
+          <div class="panel-heading">
+            <h2>オファーブリーフ</h2>
+            <p>短いオファー、LP見出し案、SNS投稿テーマ、問い合わせ誘導文を出力します。</p>
+          </div>
+          <div id="output" class="empty-state">
+            フォームを入力してブリーフを作成してください。
+          </div>
+          <button id="copy-output" class="secondary-button" type="button" disabled>ブリーフをコピー</button>
+        </aside>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
