@@ -521,6 +521,17 @@ h3 {
   margin-top: 28px;
 }
 
+.checklist-list li {
+  margin-bottom: 8px;
+}
+
+.stacked-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
 .sample-link {
   display: inline-flex;
   align-items: center;
@@ -596,6 +607,14 @@ ul {
   }
 
   .decision-panel .primary-action {
+    justify-content: center;
+  }
+
+  .stacked-actions {
+    justify-content: stretch;
+  }
+
+  .stacked-actions a {
     justify-content: center;
   }
 }
