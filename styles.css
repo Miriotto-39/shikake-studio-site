@@ -244,6 +244,24 @@ h3 {
   margin-top: 14px;
 }
 
+.decision-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 18px;
+  align-items: center;
+  margin-top: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 22px;
+  background: var(--soft);
+}
+
+.decision-panel p {
+  margin-bottom: 0;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
 .note-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -527,6 +545,14 @@ ul {
 
   .sample-cards {
     grid-template-columns: 1fr;
+  }
+
+  .decision-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .decision-panel .primary-action {
+    justify-content: center;
   }
 }
 
