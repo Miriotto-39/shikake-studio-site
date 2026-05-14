@@ -350,7 +350,9 @@ h3 {
 }
 
 .apply-form,
-.apply-output {
+.apply-output,
+.quiz-form,
+.quiz-result {
   border: 1px solid var(--line);
   border-radius: 8px;
   padding: 22px;
@@ -358,7 +360,8 @@ h3 {
 }
 
 .apply-form label,
-.agreement-box legend {
+.agreement-box legend,
+.quiz-form legend {
   display: block;
   margin-bottom: 8px;
   font-size: 14px;
@@ -413,6 +416,46 @@ h3 {
 .agreement-box input {
   width: auto;
   margin: 4px 0 0;
+}
+
+.quiz-layout {
+  display: grid;
+  grid-template-columns: 420px minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.quiz-form fieldset {
+  margin: 0 0 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 14px;
+}
+
+.quiz-form label {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  color: var(--muted);
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.quiz-form input {
+  margin-top: 4px;
+}
+
+.quiz-form button {
+  width: 100%;
+  min-height: 48px;
+  border: 0;
+  border-radius: 8px;
+  color: #fff;
+  background: var(--primary);
+  font: inherit;
+  font-weight: 900;
+  cursor: pointer;
 }
 
 .apply-output p {
@@ -535,7 +578,8 @@ ul {
   .price-grid,
   .note-grid,
   .live-form-panel,
-  .apply-layout {
+  .apply-layout,
+  .quiz-layout {
     grid-template-columns: 1fr;
   }
 

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>相談タイプ診断 | Shikake Studio（仮）</title>
+    <meta name="description" content="Shikake Studioに相談する前に、作りたいものがLP構成、SNS投稿企画、問い合わせ返信、棚卸し、オファー整理のどれに近いか確認できます。">
+    <link rel="canonical" href="https://miriotto-39.github.io/shikake-studio-site/start.html">
+    <meta property="og:title" content="相談タイプ診断 | Shikake Studio（仮）">
+    <meta property="og:description" content="フォーム送信前に、作りたいものの種類と送る内容を整理できます。外部送信や保存は行いません。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://miriotto-39.github.io/shikake-studio-site/start.html">
+    <meta property="og:image" content="https://miriotto-39.github.io/shikake-studio-site/assets/ai-workflow-audit.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html">Shikake Studio（仮）</a>
+      <nav aria-label="主要ナビゲーション">
+        <a href="index.html">LP</a>
+        <a href="start.html">診断</a>
+        <a href="note.html">記事</a>
+        <a href="index.html#sample">サンプル</a>
+        <a href="scope.html">提供範囲</a>
+        <a href="order.html">有料前チェック</a>
+        <a href="faq.html">FAQ</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section policy-page">
+        <div class="section-heading">
+          <p class="eyebrow">Start</p>
+          <h1>相談タイプ診断</h1>
+          <p class="lead">
+            作りたいものがまだ曖昧な場合に、どの相談に近いかを整理します。このページは外部送信や保存を行いません。
+          </p>
+        </div>
+
+        <div class="quiz-layout">
+          <form id="start-quiz" class="quiz-form">
+            <fieldset>
+              <legend>今いちばん困っていること</legend>
+              <label><input type="radio" name="goal" value="lp" checked> サービスや商品の説明ページを整えたい</label>
+              <label><input type="radio" name="goal" value="sns"> SNSや発信のネタを決めたい</label>
+              <label><input type="radio" name="goal" value="reply"> 問い合わせ返信の迷いを減らしたい</label>
+              <label><input type="radio" name="goal" value="audit"> 業務や発信のどこをAI化できるか知りたい</label>
+              <label><input type="radio" name="goal" value="offer"> 売り出し文や提案の軸を整理したい</label>
+            </fieldset>
+
+            <fieldset>
+              <legend>今ある材料</legend>
+              <label><input type="checkbox" name="materials" value="service"> サービスや商品の概要</label>
+              <label><input type="checkbox" name="materials" value="target"> 対象顧客のイメージ</label>
+              <label><input type="checkbox" name="materials" value="problem"> 顧客の悩み</label>
+              <label><input type="checkbox" name="materials" value="action"> 次に取ってほしい行動</label>
+            </fieldset>
+
+            <fieldset>
+              <legend>使う場所</legend>
+              <label><input type="radio" name="channel" value="web" checked> Webページ</label>
+              <label><input type="radio" name="channel" value="sns"> X、Instagram、ブログなど</label>
+              <label><input type="radio" name="channel" value="message"> メール、DM、問い合わせ返信</label>
+              <label><input type="radio" name="channel" value="internal"> 自分用の整理メモ</label>
+            </fieldset>
+
+            <button type="submit">診断結果を作る</button>
+          </form>
+
+          <aside class="quiz-result" aria-live="polite">
+            <div class="panel-heading">
+              <h2>診断結果</h2>
+              <p>フォームへ送る前の整理メモを作れます。</p>
+            </div>
+            <div id="quiz-output" class="empty-state">項目を選んで診断してください。</div>
+            <div class="article-actions">
+              <button id="copy-quiz" class="secondary-action" type="button" disabled>整理メモをコピー</button>
+              <a class="primary-action" href="order.html">受付ページへ進む</a>
+            </div>
+          </aside>
+        </div>
+
+        <p class="price-note">
+          機密情報、顧客情報、口座情報、パスワード、本人確認書類は入力しないでください。診断結果は目安であり、受付可否は個別確認後に判断します。
+        </p>
+      </section>
+    </main>
+
+    <script src="start.js"></script>
+  </body>
+</html>
