@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>小さな自動化サンプル | Shikake Studio（仮）</title>
+    <meta name="description" content="Excel、CSV、スプレッドシート作業を小さく自動化する場合の架空サンプルです。手順整理、試作、使い方メモの粒度を確認できます。">
+    <link rel="canonical" href="https://miriotto-39.github.io/shikake-studio-site/automation-sample.html">
+    <meta property="og:title" content="小さな自動化サンプル">
+    <meta property="og:description" content="CSV整形と月次集計を例に、29,800円前後で返す粒度を確認できます。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miriotto-39.github.io/shikake-studio-site/automation-sample.html">
+    <meta property="og:image" content="https://miriotto-39.github.io/shikake-studio-site/assets/ai-workflow-audit.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html">Shikake Studio（仮）</a>
+      <nav aria-label="主要ナビゲーション">
+        <a href="office-automation.html">自動化</a>
+        <a href="process.html">納品までの流れ</a>
+        <a href="order.html">受付可否確認</a>
+      </nav>
+    </header>
+
+    <main>
+      <article class="section policy-page">
+        <div class="section-heading">
+          <p class="eyebrow">Sample output</p>
+          <h1>小さな自動化サンプル</h1>
+          <p class="lead">
+            架空のCSV集計作業を例にした、自動化納品のイメージです。実在する会社、顧客、データは含みません。
+          </p>
+        </div>
+
+        <div class="article-body">
+          <h2>想定ケース</h2>
+          <p>毎月、複数のCSVを開き、列名をそろえ、不要行を消し、月次集計用のExcelに貼り付けている。作業に毎回1〜2時間かかり、手順が人によって少しずれる。</p>
+
+          <h2>整理する手順</h2>
+          <ol>
+            <li>CSVを所定フォルダに置く</li>
+            <li>列名を標準名にそろえる</li>
+            <li>不要行と空欄を除外する</li>
+            <li>月別、商品別、担当別に集計する</li>
+            <li>確認用Excelを出力する</li>
+          </ol>
+
+          <h2>納品するもの</h2>
+          <ul>
+            <li>CSV整形と集計の試作スクリプトまたはシート</li>
+            <li>サンプルデータでの出力例</li>
+            <li>使い方メモ</li>
+            <li>自動化する部分と人が確認する部分のメモ</li>
+            <li>軽微な修正1回</li>
+          </ul>
+
+          <h2>使い方メモの例</h2>
+          <p>毎月のCSVを同じフォルダに置き、実行します。出力されたExcelの件数、合計金額、空欄件数を確認してから社内利用してください。列名が変わった場合は、変換表を更新します。</p>
+
+          <h2>対象外</h2>
+          <p>本番システム開発、会員管理、決済、認証、個人情報処理、社内ネットワーク設定、成果保証は含みません。実データを送る場合も、顧客名、住所、電話番号、口座情報、本人確認情報などは削除してください。</p>
+
+          <div class="article-actions">
+            <a class="primary-action" href="order.html">無料で受付可否を確認する</a>
+            <a class="text-action" href="office-automation.html">自動化ページへ戻る</a>
+          </div>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>
