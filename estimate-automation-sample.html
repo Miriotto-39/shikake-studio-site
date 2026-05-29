@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>見積書自動作成 初回整理サンプル | Shikake Studio（仮）</title>
+    <meta name="description" content="見積書自動作成をAIだけに任せず、見積項目マスタ、入力フォーム、ルール、AI判定範囲に分けて整理する架空サンプルです。">
+    <link rel="canonical" href="https://miriotto-39.github.io/shikake-studio-site/estimate-automation-sample.html">
+    <meta property="og:title" content="見積書自動作成 初回整理サンプル">
+    <meta property="og:description" content="AI見積自動化の前に、項目マスタ、入力フォーム、ルール、外部価格取得の扱いを整理する架空サンプルです。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miriotto-39.github.io/shikake-studio-site/estimate-automation-sample.html">
+    <meta property="og:image" content="https://miriotto-39.github.io/shikake-studio-site/assets/ai-workflow-audit.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html">Shikake Studio（仮）</a>
+      <nav aria-label="主要ナビゲーション">
+        <a href="automation-sample.html">自動化サンプル</a>
+        <a href="office-automation.html">業務自動化</a>
+        <a href="order.html">受付可否確認</a>
+      </nav>
+    </header>
+
+    <main>
+      <article class="section policy-page">
+        <div class="section-heading">
+          <p class="eyebrow">Estimate automation sample</p>
+          <h1>見積書自動作成 初回整理サンプル</h1>
+          <p class="lead">
+            見積書作成を自動化する前に、AIで判断する部分、マスタで固定する部分、人が確認する部分を分けるための整理例です。架空ケースのため、実在する会社、顧客情報、単価表は含みません。
+          </p>
+        </div>
+
+        <div class="article-body">
+          <h2>想定ケース</h2>
+          <p>DM発送代行の見積作成で、依頼文から封入、宛名ラベル、区分、作業基本料、封筒などの必要項目を選び、見積書に反映するケースを想定しています。</p>
+
+          <h2>最初に分ける項目</h2>
+          <ul>
+            <li>入力: 依頼内容、部数、納期、封筒種類、印刷有無、発送方法</li>
+            <li>マスタ: 作業項目、単価、最低料金、利益率、例外条件</li>
+            <li>AI判定: 依頼文から必要そうな作業項目を候補化する部分</li>
+            <li>固定ルール: 部数計算、単価計算、消費税、最低料金、端数処理</li>
+            <li>人の確認: 例外条件、特殊封入、外部印刷価格、最終金額</li>
+          </ul>
+
+          <h2>初回整理の成果物</h2>
+          <ul>
+            <li>見積項目マスタ案</li>
+            <li>入力フォーム項目案</li>
+            <li>AIに渡す指示文のたたき台</li>
+            <li>見積書テンプレートへの出力項目一覧</li>
+            <li>外部価格取得の実現可否と代替案</li>
+            <li>小さな試作に進む場合の作業範囲</li>
+          </ul>
+
+          <h2>外部価格取得の扱い</h2>
+          <p>印刷会社サイトの価格取得は、サイト仕様や利用規約、画面変更、メンテナンス負荷に左右されます。初回段階では、自動取得を前提にせず、価格表の手動更新、CSV管理、APIの有無、画面確認フローのどれが安定するかを比較します。</p>
+
+          <h2>小さく試す構成</h2>
+          <ol>
+            <li>見積パターンを10件程度の架空サンプルにする</li>
+            <li>作業項目マスタをGoogle SheetsまたはExcelで作る</li>
+            <li>依頼文から必要項目候補を出すAI指示文を作る</li>
+            <li>候補を人が確認して、見積書へ反映する</li>
+            <li>精度が安定した部分だけ自動化範囲を広げる</li>
+          </ol>
+
+          <h2>対応外</h2>
+          <p>契約前の実顧客データ受領、ログイン情報やAPIキーの受領、外部サイトの規約回避、価格取得の永続保証、売上保証、専門判断の代行は対象外です。</p>
+
+          <div class="article-actions">
+            <a class="primary-action" href="order.html">無料で受付可否を確認する</a>
+            <a class="text-action" href="automation-sample.html">サンプル一覧へ戻る</a>
+          </div>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>
